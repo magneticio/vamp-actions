@@ -1,5 +1,5 @@
 node_modules/
 __tests__/runner/*
 
-**/src/*.js
-**/src/*.d.ts
+**/src/**/*.js
+**/src/**/*.d.ts

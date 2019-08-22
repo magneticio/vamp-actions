@@ -3,3 +3,6 @@ __tests__/runner/*
 
 **/src/**/*.js
 **/src/**/*.d.ts
+lib
+
+tsconfig.tsbuildinfo

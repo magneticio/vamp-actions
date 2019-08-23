@@ -2,7 +2,7 @@ node_modules/
 __tests__/runner/*
 
 **/src/**/*.js
-**/src/**/*.d.ts
-lib
+**/*.d.ts
+**/*.js.map
 
 tsconfig.tsbuildinfo

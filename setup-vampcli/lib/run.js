@@ -64,6 +64,9 @@ function downloadVampcli(version) {
         if (!cachedToolpath) {
             try {
                 vampcliDownloadPath = yield toolCache.downloadTool(getVampcliDownloadURL(version));
+                let newVampcliDownloadPath = path.join(path.dirname(vampcliDownloadPath), 'vamp');
+                yield fs.renameSync(vampcliDownloadPath, newVampcliDownloadPath);
+                vampcliDownloadPath = newVampcliDownloadPath;
             }
             catch (exception) {
                 throw new Error('DownloadVampcliFailed');

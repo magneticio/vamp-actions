@@ -8,10 +8,10 @@
             "type": "node",
             "request": "launch",
             "preLaunchTask": "build",
-            "name": "Action: setup-kubectl",
-            "program": "${workspaceFolder}/setup-kubectl/src/run.ts",
+            "name": "Action: setup-vampcli",
+            "program": "${workspaceFolder}/setup-vampcli/src/run.ts",
             "outFiles": [
-                "${workspaceFolder}/setup-kubectl/lib/**/*.js"
+                "${workspaceFolder}/setup-vampcli/lib/**/*.js"
             ]
         }
     ]

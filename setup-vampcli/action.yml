@@ -1,0 +1,15 @@
+name: 'Vamp CLI tool installer'
+description: 'Install a specific version of vamp binary. Acceptable values are latest or any semantic version string like 0.0.53'
+inputs: 
+  version:
+    description: 'Version of vamp'
+    required: true
+    default: 'latest'
+outputs:
+  vampcli-path:
+    description: 'Path to the cached vamp binary'
+branding:
+  color: 'blue'
+runs:
+  using: 'node12'
+  main: 'lib/run.js'

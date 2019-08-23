@@ -11,6 +11,8 @@
   "references": [
     { "path": "./docker-login/tsconfig.json" },
     { "path": "./docker-logout/tsconfig.json" },
-    { "path": "./setup-kubectl/tsconfig.json" }
+    { "path": "./kubernetes-context/tsconfig.json" },
+    { "path": "./setup-kubectl/tsconfig.json" },
+    { "path": "./setup-vampcli/tsconfig.json" }
   ]
 }

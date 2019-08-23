@@ -53,9 +53,9 @@ async function downloadVampcli(version: string): Promise<string> {
     if (!cachedToolpath) {
         try {
             vampcliDownloadPath = await toolCache.downloadTool(getVampcliDownloadURL(version));
-            let newVampcliDownloadPath = path.join(path.dirname(vampcliDownloadPath), 'vamp');
+            /*let newVampcliDownloadPath = path.join(path.dirname(vampcliDownloadPath), 'vamp');
             await fs.renameSync(vampcliDownloadPath, newVampcliDownloadPath)
-            vampcliDownloadPath = newVampcliDownloadPath;
+            vampcliDownloadPath = newVampcliDownloadPath;*/
         } catch (exception) {
             throw new Error('DownloadVampcliFailed');
         }

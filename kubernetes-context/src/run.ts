@@ -14,9 +14,9 @@ function getKubeconfig(): string {
         core.debug("Setting context using kubeconfig");
         return kubeconfig;
     }
-    const clusterUrl = core.getInput('k8s-url', { required: true });
+    const clusterUrl = core.getInput('cluster-url', { required: true });
     core.debug("Found clusterUrl, creating kubeconfig using certificate and token");
-    let token = Buffer.from(core.getInput('k8s-secret'), 'base64').toString();
+    let token = Buffer.from(core.getInput('user-secret'), 'base64').toString();
     const kubeconfigObject = {
         "apiVersion": "v1",
         "kind": "Config",

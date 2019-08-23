@@ -1,7 +1,28 @@
-name: 'Docker Logout'
-description: 'Docker logout'
+name: 'Kubernetes context'
+description: 'Set the Kubernetes context'
+inputs: 
+# Used for setting the target Kubernetes cluster context which will be used by other actions like magneticio/vamp-actions/kubernetes-deploy
+  kubeconfig:
+    description: 'Kubernetes Config'
+    required: false
+    default: ''
+  context:
+    description: 'If your kubeconfig has multiple contexts, use this field to use a specific context, otherwise the default one would be chosen'
+    required: false
+    default: ''
+
+  cluster-url:
+    description: 'Cluster Url'
+    required: false
+    default: ''
+  user-secret:
+    description: 'Service account token'
+    required: false
+    default: ''
+    
+  
 branding:
-  color: 'green'
+  color: 'green' # optional, decorates the entry in the GitHub Marketplace
 runs:
   using: 'node12'
   main: 'lib/run.js'
